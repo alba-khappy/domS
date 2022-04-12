@@ -1,0 +1,137 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("~@/assets/fonts/Montserrat-Regular.woff") format("woff");
+  //url("/src/assets/fonts/Montserrat-Regular.woff2") format("woff2");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 500;
+  src: url("~@/assets/fonts/Montserrat-Medium.woff") format("woff");
+  //url("/src/assets/fonts/Geometria-Medium.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 700;
+  src: url("~@/assets/fonts/Montserrat-Bold.woff") format("woff");
+  //url("/src/assets/fonts/Geometria-Bold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Cormorant";
+  font-weight: 400;
+  src: url("~@/assets/fonts/CormorantSC-Regular.woff") format("woff");
+  //url("/src/assets/fonts/Geometria-Bold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Cormorant";
+  font-weight: 500;
+  src: url("~@/assets/fonts/CormorantSC-Medium.woff") format("woff");
+  //url("/src/assets/fonts/Geometria-Bold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Cormorant";
+  font-weight: 700;
+  src: url("~@/assets/fonts/CormorantSC-Medium.woff") format("woff");
+  //url("/src/assets/fonts/Geometria-Bold.woff2") format("woff2");
+}
+
+$blackColor: #262626;
+$whiteColor: #ffffff;
+$orangeColor: #FA6232;
+$blueColor: #67A8D2;
+$darkGreyColor: #3C3B3B;
+$lightGrayColor: #858585;
+
+@mixin mainTextStyle {
+         font-weight: 400;
+         font-size: 20px;
+         line-height: 150%;
+       }
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+}
+
+button {
+  border: none;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: $whiteColor;
+}
+
+main {
+  color: $blackColor;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.h2 {
+  font-weight: 400;
+  font-size: 48px;
+  letter-spacing: 0.04em;
+  color: $darkGreyColor;
+}
+
+.h3 {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 150%;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: $darkGreyColor;
+
+}
+
+.orange-btn {
+  display: inline-block;
+  color: $whiteColor;
+  padding: 7px 32px;
+  background-color: $orangeColor;
+  border-radius: 5px;
+}
+
+@media (max-width: 1000px) {
+
+}
