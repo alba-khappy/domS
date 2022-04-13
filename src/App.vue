@@ -14,7 +14,7 @@
         .section-nav
             ul.container.nav__list
                 li.nav__item
-                    a(href="").nav__link ХОСТИНГ
+                    a(href="").nav__link.nav__link--align ХОСТИНГ
                 li.nav__item
                     a(href="").nav__link VPS
                 li.nav__item
@@ -32,7 +32,10 @@
                 p.about__p.about__p--bold 1С-Битрикс, Wordpress, Opencart, DLE, Joomla и др.
                 p.about__p.about__p--normal Всё включено:
                 p.about__p.about__p--bold PHP 5.4 – 8.0, Perl, FTP, MySQL, ISPManager
-                a(href="").orange-btn Заказать хостинг
+                div
+                    div.about__price Всего от <span class="bold-text">99 ₽ в месяц!</span>
+
+                    a(href="").orange-btn Заказать хостинг
 
 
         .section-rates
@@ -335,6 +338,7 @@
     .header-contacts {
         display: flex;
         flex-direction: column;
+        gap: 20px;
     }
 
     .header__link {
@@ -363,25 +367,37 @@
         &:before {
             background: transparent url("./assets/mail_icon.svg") no-repeat center;
         }
+
+        &:after {
+            content: '(поддержка 24/7)';
+            position: absolute;
+            top: 15px;
+            left: 66px;
+            font-style: italic;
+            font-weight: 300;
+            font-size: 14px;
+        }
     }
 
     .header__right-part {
         display: flex;
-        justify-content: center;
+        justify-content: end;
         align-items: center;
     }
 
     .header__button-buy {
         background-color: $blueColor;
-        padding: 7px 40px;
+        padding: 10px 48px;
         color: $whiteColor;
-        margin-right: 36px;
+        margin-right: 25px;
+        font-size: 20px;
+        border-radius: 5px;
     }
 
     .header__link--account {
         display: block;
-        width: 44px;
-        height: 44px;
+        width: 55px;
+        height: 55px;
         background: transparent url("./assets/account.svg") no-repeat center;
     }
 
@@ -406,11 +422,8 @@
         position: relative;
         text-align: center;
 
-        &:not(:last-child):after {
-            content: '|';
-            position: absolute;
-            right: 0;
-            color: $lightGrayColor;
+        &:not(:last-child) {
+            border-right: 1px solid $lightGrayColor;
         }
     }
 
@@ -424,30 +437,42 @@
         color: $blackColor;
     }
 
+    .nav__link--align {
+        text-align: left;
+    }
 
 
-    /*section-about*/
+
+        /*section-about*/
     .section-about {
-        padding: 64px 130px;
-        background: linear-gradient(91.05deg, #5994BA 14.15%, #ADCCE0 99%);
+        padding: 60px 130px 90px;
+        background: url(./assets/about.svg) no-repeat 95%, linear-gradient(91.05deg, #5994BA 14.15%, #ADCCE0 99%);;
+        background-size: contain;
     }
 
     .about-container {
-        background: transparent url("./assets/about.svg") no-repeat center;
+        //background: transparent url("./assets/about.svg") no-repeat center;
     }
 
     .about__h1 {
+        max-width: 770px;
         font-weight: 500;
         font-size: 72px;
         line-height: 100%;
         letter-spacing: 0.06em;
         color: $whiteColor;
         text-shadow: 3px 1px 0 #3E708F;
+        margin-bottom: 30px;
     }
 
     .about__p {
         @include mainTextStyle;
         color: $whiteColor;
+    }
+
+    .about__price {
+        color: $whiteColor;
+        background-image: url("./assets/about__price.svg") no-repeat center;
     }
 
     .about__p--normal {
@@ -456,6 +481,7 @@
 
     .about__p--bold {
         font-weight: 600;
+        margin-bottom: 10px;
     }
 
 
@@ -972,7 +998,7 @@
         background: transparent url("./assets/socials4.svg") no-repeat center;
     }
 
-    .footer__left-links {
+    .footer__info-link {
         font-weight: 400;
         font-size: 16px;
         line-height: 150%;
